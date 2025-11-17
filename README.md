@@ -32,9 +32,9 @@ On first launch, users are directed to the Profile Creation screen. Profiles con
 - Awards
 - Hobbies
 - References
-<img width="1440" height="3040" alt="Screenshot_1763400870" src="https://github.com/user-attachments/assets/c8bee2f4-0e82-4471-82f2-1be6ff6c944b" />
-<img width="1440" height="3040" alt="Screenshot_1763401493" src="https://github.com/user-attachments/assets/fa4a1c05-44f8-4543-9e21-65638109ae2c" />
-<img width="1440" height="3040" alt="Screenshot_1763401550" src="https://github.com/user-attachments/assets/18385481-3760-473e-997a-be99e4f7f690" />
+<img width="720" height="1520" alt="Screenshot_1763400870" src="https://github.com/user-attachments/assets/c8bee2f4-0e82-4471-82f2-1be6ff6c944b" />
+<img width="720" height="1520" alt="Screenshot_1763401493" src="https://github.com/user-attachments/assets/fa4a1c05-44f8-4543-9e21-65638109ae2c" />
+<img width="720" height="1520" alt="Screenshot_1763401550" src="https://github.com/user-attachments/assets/18385481-3760-473e-997a-be99e4f7f690" />
 
 
 ### 2. Profiles Screen
@@ -47,14 +47,14 @@ All profiles are displayed as cards with a summary. Users can:
 
 ### 3. Make CV
 Selected profiles can be used to generate CVs in a chosen template.
-<img width="1440" height="3040" alt="Screenshot_1763401817" src="https://github.com/user-attachments/assets/55e1df09-2f36-480c-8891-e8a3185d1738" />
+<img width="720" height="1520" alt="Screenshot_1763401817" src="https://github.com/user-attachments/assets/55e1df09-2f36-480c-8891-e8a3185d1738" />
 
 ### 4. Template Selection & Customization
 - **Language**: Changes only section titles (e.g., "Work Experience" → "Deneyimler")
 - **Typography**: Customize fonts for titles and content
 - **Design**: Adjust colors, font sizes, and layout
 - **Content Control**: Show/hide entire sections or individual items independently
-<img width="1440" height="3040" alt="Screenshot_1763401888" src="https://github.com/user-attachments/assets/6e3e5a19-3709-4d6b-b46b-0b8262b2f460" />
+<img width="720" height="1520" alt="Screenshot_1763401888" src="https://github.com/user-attachments/assets/6e3e5a19-3709-4d6b-b46b-0b8262b2f460" />
 
 ### 5. Save or Export
 - Save customized CVs for later editing
