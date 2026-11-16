@@ -3,6 +3,7 @@ import './Cvs.css';
 
 import Sidebar from '../../../components/Sidebar/Sidebar';
 import CvCard from '../../../components/CvCard/CvCard';
+import MessageModal from '../../../components/MessageModal/MessageModal';
 
 import api from '../../../services/api';
 import { useAuth } from '../../../context/AuthContext';
@@ -21,6 +22,23 @@ const Cvs = () => {
     const [cvs, setCvs] = useState<Cv[]>([]);
     const [loading, setLoading] = useState(true);
 
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalType, setModalType] = useState<'message' | 'error' | 'confirm'>('message');
+    const [modalTitle, setModalTitle] = useState('');
+    const [modalMessage, setModalMessage] = useState('');
+
+    const showMessage = (
+        title: string,
+        message: string,
+        type: 'message' | 'error' | 'confirm' = 'message'
+    ) => {
+        setModalTitle(title);
+        setModalMessage(message);
+        setModalType(type);
+        setModalVisible(true);
+    };
+
+
     useEffect(() => {
         const fetchCvs = async () => {
             try {
@@ -34,6 +52,11 @@ const Cvs = () => {
 
             } catch (error) {
                 console.error('CVs could not be retrieved:', error);
+                showMessage(
+                    'Error',
+                    'CVs could not be retrieved.',
+                    'error'
+                );
             } finally {
                 setLoading(false);
             }
@@ -50,15 +73,26 @@ const Cvs = () => {
 
         } catch (error) {
             console.error('CV deletion error:', error);
-            alert('CV could not be deleted.');
+            showMessage(
+                'Error',
+                'CV could not be deleted.',
+                'error'
+            );
         }
     };
-
-    console.log(cvs)
 
     return (
         <div className="cvs-page">
             <Sidebar />
+            <MessageModal
+                visible={modalVisible}
+                type={modalType}
+                title={modalTitle}
+                message={modalMessage}
+                onClose={() => {
+                    setModalVisible(false)
+                }}
+            />
 
             <main className="cvs-content">
                 <div className="cvs-header">

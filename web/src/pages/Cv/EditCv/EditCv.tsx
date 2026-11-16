@@ -8,6 +8,7 @@ import fontFamilyList from '../../../features/data/fontFamilyList';
 import loadContentProfile from '../../../features/data/loadContentProfile';
 
 import SectionModal from '../../../components/SectionModal/SectionModal';
+import MessageModal from '../../../components/MessageModal/MessageModal';
 import BaseButton from '../../../components/BaseButton/BaseButton';
 import TextInput from '../../../components/TextInput/TextInput';
 import Dropdown from '../../../components/Dropdown/Dropdown';
@@ -29,6 +30,21 @@ const EditCv = () => {
     const [isPdfLoading, setIsPdfLoading] = useState(false);
 
     const SelectedComponent = selectedTemplate.component;
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalType, setModalType] = useState<'message' | 'error' | 'confirm'>('message');
+    const [modalTitle, setModalTitle] = useState('');
+    const [modalMessage, setModalMessage] = useState('');
+
+    const showMessage = (
+        title: string,
+        message: string,
+        type: 'message' | 'error' | 'confirm' = 'message'
+    ) => {
+        setModalTitle(title);
+        setModalMessage(message);
+        setModalType(type);
+        setModalVisible(true);
+    };
     
     const [sectionModal, setSectionModal] = useState({ isOpen: false, title: '',});
 
@@ -131,7 +147,6 @@ const EditCv = () => {
     };
     
     const handleSectionSave = (updatedData: any) => {
-        console.log(updatedData)
         setContentProfile((prev: any) => {
             if (sectionModal.title === 'photo') {
                 return {
@@ -283,7 +298,6 @@ const EditCv = () => {
 
     // CV SAVE
     const handleEdit = async () => {
-        console.log(contentProfile)
         try {
             const thumbnail = await captureCvThumbnail();
 
@@ -563,8 +577,15 @@ const EditCv = () => {
             );
 
             if (!hasSummary) {
-                console.error('CareerSummary or CareerGoals must be visible.');
+
+            if (!hasSummary) {
+                showMessage(
+                    'Warning',
+                    'Career Summary or Career Goals must be visible.',
+                    'error'
+                );
                 return;
+            }
             }
             // FORM DATA
             const formData = new FormData();
@@ -588,6 +609,12 @@ const EditCv = () => {
             console.error('CV could not be updated:', error);
             console.log('BACKEND ERROR:', error.response?.data);
             console.log('STATUS:', error.response?.status);
+            
+            showMessage(
+                'Error',
+                'CV could not be updated.',
+                'error'
+            );
         }
     };
 
@@ -599,7 +626,12 @@ const EditCv = () => {
             await selectedTemplate.exportPdf(contentProfile);
 
         } catch (error) {
-            console.error('PDF oluşturulamadı:', error);
+            console.error('Could not create PDF:', error);
+            showMessage(
+                'Error',
+                'Could not create PDF.',
+                'error'
+            );
         } finally {
             setIsPdfLoading(false);
         }
@@ -640,6 +672,19 @@ const EditCv = () => {
                 }
                 onClose={closeSectionModal}
                 onSave={handleSectionSave}
+            />
+            <MessageModal
+                visible={modalVisible}
+                type={modalType}
+                title={modalTitle}
+                message={modalMessage}
+                onClose={() => {
+                    setModalVisible(false);
+
+                    if (modalTitle === 'Success') {
+                        navigate('/cvs');
+                    }
+                }}
             />
 
             {/* RIGHT -> EDITING */}

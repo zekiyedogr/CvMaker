@@ -72,6 +72,11 @@ const CreateCv = () => {
 
             } catch (error) {
                 console.error('Profile could not be fetched:', error);
+                showMessage(
+                    'Error',
+                    'Profile could not be fetched.',
+                    'error'
+                );
             } finally {
                 setLoading(false);
             }
@@ -600,7 +605,6 @@ const CreateCv = () => {
     };
 
     const handleSectionSave = (updatedData: any) => {
-        console.log(updatedData)
         setContentProfile((prev: any) => {
             if (sectionModal.title === 'photo') {
                 return {
