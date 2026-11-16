@@ -474,8 +474,7 @@ const CreateCv = () => {
                     CvVisibilitiesData,
                 })
             );
-
-            
+           
 
             console.log('CV DATA:', JSON.stringify({
                 cvData,
@@ -587,6 +586,14 @@ const CreateCv = () => {
         }));
     };
 
+    const handlePdf = () => {
+                showMessage(
+                    'Error',
+                    'I ran out of time.',
+                    'error'
+                );
+            }
+
     if (loading) {
         return (
             <View style={styles.center}>
@@ -684,7 +691,7 @@ const CreateCv = () => {
                         </View>
 
                         <View style={styles.actionButtonContainer}>
-                            <BaseButton title="PDF" onPress={() => {}} />
+                            <BaseButton title="PDF" onPress={handlePdf} />
                         </View>
                     </View>
 

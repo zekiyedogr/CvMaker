@@ -138,14 +138,9 @@ const AddProfile = ({ navigation }: any) => {
 
                 const response = await api.get(`/profiles/${copyFrom}`);
 
-                const copiedProfile = response.data.data;
+                
 
-                setProfile({
-                    ...copiedProfile,
-                    Id: 0,
-                    UserId: 0,
-                    Name: `${copiedProfile.Name} Copy`,
-                });
+                setProfile(response.data.data);
 
             } catch (error: any) {
                 console.error(
