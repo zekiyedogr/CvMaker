@@ -1,0 +1,90 @@
+@import '../../styles/general.css';
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: var(--city-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-panel {
+    width: 500px;
+    min-height: 600px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: var(--panel-background);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 32px;
+
+    box-shadow:
+        0 12px 35px rgba(31, 78, 121, 0.12),
+        0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.logo-img {
+    width: 250px;
+}
+
+.login-content{    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-p {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.explanation-p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+#form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+#register-href {
+    color: var(--light-purple);
+    text-decoration: none;
+}
+
+#form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+}

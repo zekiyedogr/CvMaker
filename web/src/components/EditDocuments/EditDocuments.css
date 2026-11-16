@@ -1,0 +1,32 @@
+@import '../../styles/general.css';
+
+.edit-documents-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.edit-documents-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid ;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.edit-documents-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.edit-documents-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}

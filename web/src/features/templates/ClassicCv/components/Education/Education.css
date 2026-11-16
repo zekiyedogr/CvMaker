@@ -1,0 +1,59 @@
+
+.classic-education {
+    margin: var(--cv-gap) 0;
+}
+
+.classic-contact {
+    margin: var(--cv-gap) 0;
+}
+
+/* Her eğitim kaydı */
+.classic-education-item {
+    display: flex;
+    gap: var(--cv-gap);
+    margin-top: var(--cv-gap);
+    min-width: 0;
+    flex-direction: column;
+}
+
+/* Tarihler */
+.classic-education-years {
+    display: flex;
+    gap: 5px;
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-content-size);
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin-bottom: 1px;
+}
+
+/* Okul adı */
+.classic-education-item .cv-subtitle {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-content-size);
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+}
+
+/* Bölüm ve GPA */
+.classic-education-item .cv-content {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-content-size);
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: left;
+    margin: 0;
+}
+
+/* Düzenleme butonu için */
+.classic-education .edit-button-visib {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}

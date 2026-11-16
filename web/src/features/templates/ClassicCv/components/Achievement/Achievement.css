@@ -1,0 +1,56 @@
+.classic-achievement {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--cv-gap);
+}
+
+.classic-achievement-title {
+    margin: 0;
+}
+
+.classic-achievement-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+    width: 100%;
+}
+
+.classic-achievement-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.classic-achievement-name {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-subtitle-size);
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+}
+
+.classic-achievement-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--cv-gap);
+    width: 100%;
+}
+
+.classic-achievement-issuer {
+    text-align: left;
+}
+
+.classic-achievement-date {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.classic-achievement .edit-button-visib {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 2;
+}

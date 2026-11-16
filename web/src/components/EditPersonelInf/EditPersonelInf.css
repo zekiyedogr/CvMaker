@@ -1,0 +1,142 @@
+
+.personal-inf-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.personal-inf-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.personal-inf-photo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--light-gray);
+}
+
+/* Profile Photo Upload */
+.personal-inf-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+}
+
+.personal-inf-photo label {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.personal-inf-photo input[type="file"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px dashed var(--light-purple);
+    border-radius: 10px;
+    background-color: rgba(117, 69, 214, 0.04);
+    color: var(--dark-gray);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.personal-inf-photo input[type="file"]:hover {
+    border-color: var(--main-color);
+    background-color: rgba(117, 69, 214, 0.08);
+}
+
+.personal-inf-photo input[type="file"]::file-selector-button {
+    padding: 8px 14px;
+    margin-right: 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.personal-inf-photo input[type="file"]::file-selector-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.personal-inf-photo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--light-purple);
+}
+
+
+.personal-inf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.personal-inf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 100%;
+    min-width: 0;
+}
+
+.personal-inf-form label {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.personal-inf-form input,
+.personal-inf-form textarea {
+    width: 100%;
+    padding: 11px 13px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.personal-inf-form input:focus,
+.personal-inf-form textarea:focus {
+    border-color: var(--main-color);
+}
+
+.personal-inf-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+}
+
+.personal-inf-form input::placeholder,
+.personal-inf-form textarea::placeholder {
+    color: #94A3B8;
+}
+
+@media (max-width: 500px) {
+    .personal-inf-row {
+        grid-template-columns: 1fr;
+    }
+}

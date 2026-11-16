@@ -1,0 +1,47 @@
+/* Main Content */
+.profiles-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background);
+}
+
+.profiles-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+    overflow-y: auto;
+}
+
+/* Header */
+.profiles-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.profiles-header h1 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.profiles-header p {
+    color: var(--gray);
+    font-size: 15px;
+    margin: 0;
+}
+
+.profiles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.profiles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}

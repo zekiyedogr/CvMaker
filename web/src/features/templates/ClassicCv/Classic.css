@@ -1,0 +1,217 @@
+
+/* =================================
+   CV ANA YAPI
+================================= */
+
+.classic-cv {
+    width: 794px;
+    min-height: 1123px;
+    height: auto;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 33.33% 66.67%;
+    grid-template-rows: minmax(1123px, auto);
+
+    background-color: var(--cv-right-bg);
+
+    overflow: visible;
+    align-items: stretch;
+}
+
+.classic-content-area {
+    position: relative;
+}
+
+.edit-button-visib {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 10;
+}
+
+/* =================================
+   SOL VE SAĞ SÜTUNLAR
+================================= */
+
+.classic-left,
+.classic-right {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--cv-padding);
+    align-self: stretch;
+}
+
+.cv-left {
+    background-color: var(--cv-left-bg);
+    color: var(--cv-left-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+}
+
+.cv-right {
+    background-color: var(--cv-right-bg);
+    color: var(--cv-right-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+}
+
+/* =================================
+   FOTOĞRAF
+================================= */
+
+.classic-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--cv-gap);
+}
+
+.classic-profile-photo {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: var(--cv-photo-border-width) solid var(--cv-left-color);
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+/* =================================
+   ORTAK BAŞLIK STİLİ
+================================= */
+
+.cv-title {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-title-size);
+    font-weight: 700;
+    text-align: left;
+
+    color: inherit;
+
+    border-bottom:
+        var(--cv-title-border-width) solid currentColor;
+
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+/* Sol sütun başlıkları */
+
+.cv-left .cv-title {
+    color: var(--cv-left-title-color);
+}
+
+/* Sağ sütun başlıkları */
+
+.cv-right .cv-title {
+    color: var(--cv-right-title-color);
+}
+
+/* =================================
+   ORTAK ALT BAŞLIK STİLİ
+================================= */
+
+.cv-subtitle {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-subtitle-size);
+    font-weight: 700;
+    color: inherit;
+    margin: 0;
+}
+
+/* =================================
+   ORTAK İÇERİK STİLİ
+================================= */
+
+.cv-content {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-content-size);
+    font-weight: 400;
+    color: inherit;
+}
+
+/* =================================
+   KÜÇÜK İÇERİKLER
+================================= */
+
+.cv-small {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-small-size);
+    font-weight: 400;
+    color: inherit;
+}
+
+/* =================================
+   GENEL BOYUT VE TAŞMA KONTROLÜ
+================================= */
+
+.classic-cv * {
+    box-sizing: border-box;
+}
+
+.classic-cv img {
+    max-width: 100%;
+}
+
+.classic-cv p {
+    margin-top: 0;
+}
+
+/* =================================
+   İSİM SOYİSİM
+================================= */
+
+.classic-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--cv-gap);
+    width: 100%;
+    padding: var(--cv-padding);
+    margin: var(--cv-padding) 0;
+}
+
+.classic-name {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--cv-gap);
+}
+
+.classic-first-name {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-name-size);
+    font-weight: 400;
+    color: var(--cv-right-color);
+}
+
+.classic-last-name {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-name-size);
+    font-weight: 700;
+    color: var(--cv-left-bg);
+}
+
+.classic-profession {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-profession-size);
+    color: var(--cv-right-color);
+}
+
+.classic-name-line {
+    width: var(--cv-name-line-width);
+    height: var(--cv-name-line-height);
+    background-color: var(--cv-left-bg);
+    margin-top: var(--cv-gap);
+}

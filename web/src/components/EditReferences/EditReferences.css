@@ -1,0 +1,60 @@
+.edit-references-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.edit-references-item {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    border-top: 2px solid var(--primary-purple);
+}
+
+.edit-references-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.edit-references-header h3 {
+    margin: 0;
+    color: var(--primary-navy);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-references-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 16px;
+}
+
+.edit-references-fields > :last-child {
+    grid-column: 1 / -1;
+}
+
+.edit-references-add {
+    align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+    .edit-references-item {
+        padding: 14px;
+    }
+
+    .edit-references-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-references-fields > :last-child {
+        grid-column: auto;
+    }
+}

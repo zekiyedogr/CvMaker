@@ -1,0 +1,67 @@
+.edit-work-experiences-container {    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.edit-work-experience-dates {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+.edit-work-experience-dates > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.edit-work-experience-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.edit-work-experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 10px;
+    background-color: var(--background-primary, #ffffff);
+}
+
+.edit-work-experience-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-work-experience-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-work-experience-responsibilities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edit-work-experience-responsibilities > label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .edit-work-experience-dates {
+        flex-direction: column;
+    }
+
+    .edit-work-experience-dates > * {
+        width: 100%;
+    }
+}

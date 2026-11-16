@@ -1,0 +1,37 @@
+.edit-educations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.edit-educations-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 10px;
+    background-color: var(--background-primary, #ffffff);
+}
+
+.edit-educations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.edit-educations-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary, var(--main-color));
+}
+
+.edit-project-dates {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}

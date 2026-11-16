@@ -1,0 +1,64 @@
+.cv-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 14px;
+    transition: 0.2s ease;
+}
+
+.cv-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cv-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: var(--light-gray);
+}
+
+.cv-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cv-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.cv-card-content {
+    padding: 12px 4px;
+}
+
+.cv-card-content h3 {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.cv-card-content p {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 0;
+}
+
+.cv-card-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}

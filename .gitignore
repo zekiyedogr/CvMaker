@@ -1,0 +1,7 @@
+
+# Uploaded user files
+backend/uploads/
+mobile/.bundle/
+mobile/android/app/debug.keystore
+
+mobile/android/app/debug.keystore

@@ -1,0 +1,123 @@
+
+.classic-project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--cv-gap);
+}
+
+.classic-project-title {
+    margin: 0;
+}
+
+/* Timeline */
+.classic-project-inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.classic-project-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--cv-title-border-width);
+    background-color: currentColor;
+}
+
+.classic-project-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-padding);
+    width: 100%;
+    min-width: 0;
+    padding-left: var(--cv-padding);
+}
+
+/* Project item */
+.classic-project-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+    min-width: 0;
+}
+
+/* Project name and date */
+.classic-project-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.classic-project-bullet {
+    position: absolute;
+    left: calc(-1 * var(--cv-padding) - 5px);
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.classic-project-heading .cv-subtitle {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-subtitle-size);
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+}
+
+/* Date: project name underneath, aligned right */
+.classic-project-date {
+    display: block;
+    width: 100%;
+    font-size: var(--cv-small-size);
+    text-align: right;
+}
+
+/* Descriptions */
+.classic-project-descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+}
+
+.classic-project-description {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--cv-gap);
+    text-align: left;
+}
+
+.classic-project-description-bullet {
+    flex-shrink: 0;
+    font-size: var(--cv-content-size);
+}
+
+.classic-project-description .cv-content {
+    font-size: var(--cv-content-size);
+    text-align: left;
+    line-height: 1.3;
+}
+
+/* Link */
+.classic-project-link {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: var(--cv-content-size);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Edit button */
+.classic-project .edit-button-visib {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 2;
+}

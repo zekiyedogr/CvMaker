@@ -1,0 +1,32 @@
+.cvs-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background);
+}
+
+.cvs-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+    overflow-y: auto;
+}
+
+.cvs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.cvs-header h1 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+}
+
+.cvs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}

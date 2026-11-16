@@ -1,0 +1,81 @@
+
+.message-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 25px;
+    z-index: 9999;
+}
+
+.message-modal-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-sizing: border-box;
+    animation: messageModalFade 0.2s ease;
+}
+
+.message-modal-title {
+    color: #481CA9;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+.message-modal-title.error-title {
+    color: #EF4444;
+}
+
+.message-modal-message {
+    color: #334155;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    white-space: pre-line;
+}
+
+.message-modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.message-modal-button {
+    flex: 1;
+    height: 46px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 14px;
+    background-color: #D9B6FE;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.message-modal-button:hover {
+    background-color: #C69AF4;
+}
+
+@keyframes messageModalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

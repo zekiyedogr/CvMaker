@@ -1,0 +1,167 @@
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    position: relative;
+}
+
+.dropdown label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.dropdown-required {
+    color: var(--red);
+}
+
+.dropdown-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Ana dropdown kutusu */
+.dropdown-trigger {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    outline: none;
+
+    background-color: var(--white);
+    color: var(--main-color);
+
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropdown-trigger:hover:not(:disabled) {
+    border-color: var(--light-purple);
+}
+
+.dropdown-trigger.active {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px var(--box-back);
+}
+
+.dropdown-trigger .placeholder {
+    color: var(--gray);
+}
+
+.dropdown-trigger:disabled {
+    background-color: var(--light-gray);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Ok ikonu */
+.dropdown-icon {
+    flex-shrink: 0;
+    font-size: 18px;
+    color: var(--gray);
+    transition: transform 0.2s ease;
+}
+
+.dropdown-icon.rotated {
+    transform: rotate(180deg);
+}
+
+/* Açılan seçenek listesi */
+.dropdown-options {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+
+    padding: 5px;
+
+    background-color: var(--background);
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+
+    z-index: 100;
+    box-sizing: border-box;
+
+    animation: dropdownOpen 0.15s ease;
+    min-width: 200px;
+}
+
+/* Seçenekler */
+.dropdown-option {
+    width: 100%;
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 9px 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: transparent;
+    color: var(--gray);
+
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-option:hover {
+    background-color: var(--primary-purple);
+    color: var(--secondary-color);
+}
+
+.dropdown-option.selected {
+    background-color: var(--primary-purple);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.dropdown-check {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.dropdown-empty {
+    padding: 12px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+@keyframes dropdownOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,308 @@
+
+/* =================================
+   PDF SAYFA AYARLARI
+================================= */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    min-width: 210mm !important;
+    background: white;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+/* =================================
+   CV ANA YAPI
+================================= */
+
+.classic-cv {
+    width: 210mm !important;
+    min-width: 210mm !important;
+    max-width: none !important;
+
+    min-height: 297mm;
+    height: auto;
+
+    margin: 0 !important;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 33.33% 66.67%;
+
+    align-items: stretch;
+    overflow: visible;
+
+    box-sizing: border-box;
+    background-color: var(--cv-right-bg);
+
+    break-inside: auto;
+    page-break-inside: auto;
+}
+
+/* =================================
+   SÜTUNLAR
+================================= */
+
+.classic-left,
+.classic-right {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--cv-padding);
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.cv-left {
+    background-color: var(--cv-left-bg);
+    color: var(--cv-left-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+}
+
+.cv-right {
+    background-color: var(--cv-right-bg);
+    color: var(--cv-right-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--cv-gap);
+}
+
+/* =================================
+   FOTOĞRAF
+================================= */
+
+.classic-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--cv-gap);
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.classic-profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+
+    border: var(--cv-photo-border-width) solid var(--cv-left-color);
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+/* =================================
+   BAŞLIKLAR
+================================= */
+
+.cv-title {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-title-size);
+    font-weight: 700;
+    text-align: left;
+    color: inherit;
+
+    border-bottom:
+        var(--cv-title-border-width) solid currentColor;
+
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.cv-left .cv-title {
+    color: var(--cv-left-title-color);
+}
+
+.cv-right .cv-title {
+    color: var(--cv-right-title-color);
+}
+
+.cv-subtitle {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-subtitle-size);
+    font-weight: 700;
+    color: inherit;
+    margin: 0;
+}
+
+/* =================================
+   İÇERİK YAZILARI
+================================= */
+
+.cv-content {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-content-size);
+    font-weight: 400;
+    color: inherit;
+}
+
+.cv-small {
+    font-family: var(--cv-body-font);
+    font-size: var(--cv-small-size);
+    font-weight: 400;
+    color: inherit;
+}
+
+/* =================================
+   İSİM VE MESLEK
+================================= */
+
+.classic-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--cv-gap);
+    width: 100%;
+    padding: var(--cv-padding);
+    margin: var(--cv-padding) 0;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.classic-name {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--cv-gap);
+}
+
+.classic-first-name {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-name-size);
+    font-weight: 400;
+    color: var(--cv-right-color);
+}
+
+.classic-last-name {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-name-size);
+    font-weight: 700;
+    color: var(--cv-left-bg);
+}
+
+.classic-profession {
+    font-family: var(--cv-heading-font);
+    font-size: var(--cv-profession-size);
+    color: var(--cv-right-color);
+}
+
+.classic-name-line {
+    width: var(--cv-name-line-width);
+    height: var(--cv-name-line-height);
+    background-color: var(--cv-left-bg);
+    margin-top: var(--cv-gap);
+}
+
+/* =================================
+   BÖLÜMLERİN SAYFA KIRILMASI
+================================= */
+
+/* Bölüm başlıklarını mümkün olduğunca içerikleriyle tut */
+
+.classic-contact,
+.classic-education,
+.classic-list-item,
+.classic-project,
+.classic-profile,
+.classic-experience,
+.classic-achievement,
+.classic-reference {
+    position: relative;
+    min-width: 0;
+}
+
+/* Tek tek kayıtları iki sayfaya bölme */
+
+.classic-education-item,
+.classic-project-item,
+.classic-experience-item,
+.classic-achievement-item,
+.classic-reference-item,
+.classic-contact-item,
+.classic-list-row,
+.classic-profile-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* Başlıkları mümkün olduğunca sonraki içerikle birlikte tut */
+
+.cv-title,
+.cv-subtitle {
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+/* =================================
+   TAŞMA KONTROLÜ
+================================= */
+
+.classic-cv *,
+.classic-cv *::before,
+.classic-cv *::after {
+    box-sizing: border-box;
+}
+
+.classic-cv img {
+    max-width: 100%;
+}
+
+.classic-cv p {
+    margin-top: 0;
+}
+
+.classic-cv a {
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   PDF'DE GÖSTERİLMEYECEK ÖĞELER
+================================= */
+
+.edit-button-visib,
+.classic-content-area .edit-button-visib {
+    display: none !important;
+}
+
+/* =================================
+   RENKLERİ KORU
+================================= */
+
+.classic-left,
+.classic-right,
+.classic-profile-photo,
+.classic-name-line,
+.classic-experience-line,
+.classic-project-line {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.classic-contact-link {
+    color: inherit;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.classic-contact-link:hover {
+    text-decoration: underline;
+}

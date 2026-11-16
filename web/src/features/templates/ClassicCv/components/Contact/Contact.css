@@ -1,0 +1,22 @@
+.classic-contact {
+    margin: var(--cv-gap) 0;
+}
+
+.classic-contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--cv-gap);
+    margin-top: var(--cv-gap);
+    min-width: 0;
+}
+
+.classic-contact-icon {
+    color: inherit;
+    font-size: var(--cv-content-size);
+    flex-shrink: 0;
+}
+
+.classic-contact-text {
+    overflow-wrap: anywhere;
+    min-width: 0;
+}

@@ -1,0 +1,29 @@
+.description-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.description-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.description-input-field {
+    flex: 1;
+    min-width: 0;
+    padding: 7px 2px;
+    border: none;
+    border-bottom: 1px solid var(--primary-purple);
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.description-input-field:focus {
+    border-bottom-color: var(--light-purple);
+}

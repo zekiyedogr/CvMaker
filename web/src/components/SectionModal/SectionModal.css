@@ -1,0 +1,152 @@
+
+.section-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section-modal {
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.section-modal-header,
+.section-modal-footer {
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.section-modal-header h2 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.section-modal-close {
+    border: none;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.section-modal-content {
+    padding: 15px 22px;
+    overflow-y: auto;
+}
+
+.section-modal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.section-modal-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+.section-modal-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.section-modal-subitems {
+    padding-left: 20px;
+    border-left: 2px solid #eee;
+    margin-left: 5px;
+}
+
+.section-modal-subitems .section-modal-row {
+    font-size: 13px;
+    text-align: left;
+}
+
+.section-modal-main-toggle {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.visibility-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.visibility-control input {
+    display: none;
+}
+
+.visibility-switch {
+    width: 36px;
+    height: 20px;
+    border-radius: 20px;
+    background: #ccc;
+    position: relative;
+    transition: 0.2s;
+}
+
+.visibility-switch::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    transition: 0.2s;
+}
+
+.visibility-control input:checked + .visibility-switch {
+    background: var(--green);
+}
+
+.visibility-control input:checked + .visibility-switch::before {
+    transform: translateX(16px);
+}
+
+.section-modal-footer {
+    border-top: 1px solid #eee;
+    border-bottom: none;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.section-modal-footer button {
+    padding: 9px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.section-modal-cancel {
+    background: #eee;
+}
+
+.section-modal-save {
+    background: var(--green);
+    color: white;
+}

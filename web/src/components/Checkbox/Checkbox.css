@@ -1,0 +1,29 @@
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-purple);
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: var(--text-primary);
+    user-select: none;
+}
+
+.checkbox-input:disabled {
+    cursor: not-allowed;
+}
+
+.checkbox-container:has(.checkbox-input:disabled) {
+    cursor: not-allowed;
+}

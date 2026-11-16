@@ -1,0 +1,44 @@
+:root {
+    /* Images */
+    --city-img: url('../assets/images/login-bGround.avif');
+    --my-logo: url('../assets/images/CvMaker-Logo.png');
+
+    /* Brand colors */
+    --main-color: #14265b;
+    --secondary-color: #481ca9;
+    --light-purple: #d9b6fe;
+    --primary-purple: #f5f3ff;
+
+    /* Neutral colors */
+    --background: #F8FAFC;
+    --white: #FFFFFF;
+    --black: #161B2E;
+
+    /* Gray tones */
+    --gray: #64748B;
+    --light-gray: #E2E8F0;
+    --dark-gray: #334155;
+
+    /* Status colors */
+    --red: #EF4444;
+    --green: #269b72;
+    --yellow: #F59E0B;
+
+    /* Status background colors */
+    --success-background: #DCFCE7;
+    --success-text: #166534;
+    --error-background: #FEE2E2;
+    --error-text: #991B1B;
+    --warning-background: #FEF3C7;
+    --warning-text: #92400E;
+
+    --light-red: #FECACA;
+    --light: #FEF2F2;
+
+    /* Glass effects */
+    --panel-background: rgba(255, 255, 255, 0.35);
+    --panel-border: rgba(255, 255, 255, 0.55);
+    --input-background: rgba(255, 255, 255, 0.45);
+    --input-focus-background: rgba(255, 255, 255, 0.75);
+    --box-back: rgba(117, 69, 214, 0.12);
+}

@@ -1,0 +1,32 @@
+
+.classic-profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--cv-gap);
+}
+
+.classic-profile-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--cv-gap);
+}
+
+.classic-profile-section .cv-title {
+    margin: 0;
+}
+
+.classic-profile-section .cv-content {
+    margin: 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.classic-profile .edit-button-visib {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 2;
+}
